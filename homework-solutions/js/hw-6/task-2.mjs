@@ -29,7 +29,7 @@ const resultUniqueT1 = [];
 for (let i = 0; i < myPizzasT1.length; i++) {
   let myPizzasLC = myPizzasT1[i].toLowerCase();
   if (!competitorPizzasLC.includes(myPizzasLC)) {
-    resultUniqueT1.push(myPizzasLC);
+    resultUniqueT1.push(myPizzasT1[i]);
   }
 }
 
@@ -37,7 +37,7 @@ const resultUniqueT2 = [];
 for (let i = 0; i < myPizzasT2.length; i++) {
   let myPizzasLC = myPizzasT2[i].toLowerCase();
   if (!competitorPizzasLC.includes(myPizzasLC)) {
-    resultUniqueT2.push(myPizzasLC);
+    resultUniqueT2.push(myPizzasT2[i]);
   }
 }
 
