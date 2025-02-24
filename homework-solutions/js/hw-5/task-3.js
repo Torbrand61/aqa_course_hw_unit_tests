@@ -7,12 +7,13 @@
 const word = 'hello';
 let vowelsAndConsonantsResult = '';
 let vowelsAll = 'aeiou';
+let consonantsAll = 'bcdfghjklmnpqrstvwxyz';
 let vowels = 0;
 let consonants = 0;
 for (let letterWord of word) {
     if (vowelsAll.includes(letterWord)) {
         vowels++;
-    } else {
+    } else if (consonantsAll.includes(letterWord)) {
         consonants++;
     }
 }
@@ -31,4 +32,4 @@ console.log(vowelsAndConsonantsResult);
 // let consonants = word.length - vowels;
 // console.log(`hello contains ${vowels} vowels and ${consonants} consonants`);
 
-export { vowelsAndConsonantsResult };
+// export { vowelsAndConsonantsResult };
