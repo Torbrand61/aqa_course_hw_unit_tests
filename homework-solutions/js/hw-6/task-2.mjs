@@ -16,4 +16,45 @@
 let resultUnique;
 let resultNull;
 
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
+const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+
+const competitorPizzasLC = [];
+for (let i = 0; i < competitorPizzas.length; i++) {
+  competitorPizzasLC.push(competitorPizzas[i].toLowerCase());
+}
+
+const resultUniqueT1 = [];
+for (let i = 0; i < myPizzasT1.length; i++) {
+  let myPizzasLC = myPizzasT1[i].toLowerCase();
+  if (!competitorPizzasLC.includes(myPizzasLC)) {
+    resultUniqueT1.push(myPizzasT1[i]);
+  }
+}
+
+const resultUniqueT2 = [];
+for (let i = 0; i < myPizzasT2.length; i++) {
+  let myPizzasLC = myPizzasT2[i].toLowerCase();
+  if (!competitorPizzasLC.includes(myPizzasLC)) {
+    resultUniqueT2.push(myPizzasT2[i]);
+  }
+}
+
+if (resultUniqueT1.length) {
+  resultUnique = resultUniqueT1
+  console.log(resultUnique);
+} else {
+  resultNull = null;
+  console.log(resultNull);
+}
+
+if (resultUniqueT2.length) {
+  resultUnique = resultUniqueT2
+  console.log(resultUnique);
+} else {
+  resultNull = null;
+  console.log(resultNull);
+}
+
 export { resultNull, resultUnique };
