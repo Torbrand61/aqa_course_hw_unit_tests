@@ -32,4 +32,4 @@ console.log(vowelsAndConsonantsResult);
 // let consonants = word.length - vowels;
 // console.log(`hello contains ${vowels} vowels and ${consonants} consonants`);
 
-// export { vowelsAndConsonantsResult };
+export { vowelsAndConsonantsResult };
