@@ -5,11 +5,15 @@
   И так пока, сумма не станет меньше либо равной 9. 
   После окончания сложений возвращает полученное число.
   Например при подаче числа 19 (1+9=10>9, потому 1+0=1) выводится 1
-
 */
 
 function digitalRoot(number) {
-  // Ваш код
+  if (number <= 9) return number;
+  let sum = 0;
+  for (let digit of String(number)) {
+      sum += Number(digit);
+  }
+  return digitalRoot(sum);
 }
 
 export { digitalRoot };
