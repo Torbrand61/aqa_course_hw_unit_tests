@@ -10,15 +10,6 @@ let qa = {
   age: 30,
   salary: 5000,
   getInfo(greetingsWord) {
-    return `${greetingsWord}, my name is ${this.name} I'm ${this.age} and my salary is ${this.salary}`;
-  }
-};
-
-let qaComa = {
-  name: "Alice",
-  age: 30,
-  salary: 5000,
-  getInfo(greetingsWord) {
     return `${greetingsWord}, my name is ${this.name}, I'm ${this.age} and my salary is ${this.salary}`;
   }
 };
@@ -38,17 +29,13 @@ let anotherQa = {
 };
 
 // Используйте bind с greetingWord "Hello"
-let bindResult = qaComa.getInfo.bind(anotherQa, "Hello");
+let bindResult = qa.getInfo.bind(anotherQa, "Hello")();
 
 // Используйте call с greetingWord "Hi"
-let callResult = qaComa.getInfo.call(anotherQa, "Hi");
+let callResult = qa.getInfo.call(anotherQa, "Hi");
 
 // Используйте apply с greetingWord "Hey"
-let applyResult = qaComa.getInfo.apply(anotherQa, ["Hey"]);
-
-console.log(bindResult);
-console.log(callResult);
-console.log(applyResult);
+let applyResult = qa.getInfo.apply(anotherQa, ["Hey"]);
 
 /*
  3. Closures
@@ -63,9 +50,10 @@ console.log(applyResult);
 
 function createCounter() {
   let count = 0;
-  return function () { // Возвращаем новую функцию
-    count++; // Увеличиваем счетчик
+  return function () {
+    count++;
     console.log(`Function was called ${count} times`);
+    return count;
   };
 }
 
