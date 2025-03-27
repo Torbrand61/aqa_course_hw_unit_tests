@@ -61,7 +61,7 @@ class Developer extends Employee {
     this.programmingLanguages = programmingLanguages
   }
   addProgrammingLanguage(language) {
-    if (language.length > 0) {
+    if (language.trim().length > 0) {
       this.programmingLanguages.push(language);
     } else {
       throw new Error("Language must be a non-empty string");
